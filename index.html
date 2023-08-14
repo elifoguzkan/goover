@@ -10,65 +10,649 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+    <div class="d-flex justify-content-center p-2 speacial-brown-bg">
+      <span class="speacial-yellow-color text-uppercase p-1">More info bla bla</span>
+    </div>
   </head>
   <body>
-    <div class="d-flex justify-content-center p-2" style="background-color: rgb(53, 36, 30);">
-      <span class="text-warning text-uppercase p-1">More info bla bla</span>
-    </div>
-    <div class="video-container">
-      <video src="video.mp4" autoplay loop muted></video>
-      <div class="video-overlay"></div>
-        <iframe src="https://player.vimeo.com/video/841330646?loop=1&background=1&app_id=122963" frameborder="0" allowfullscreen></iframe>
-        <div class="header">
-          <a href="#" class="logo p-0">
-            <div class="row justify-content-start">
-              <div class="col">
-                <img class="filter-svg-invert-white" src="./src/svg/e-alphabet.svg">
-                <img class="filter-svg-invert-white" src="./src/svg/e-alphabet.svg">
-                <img class="filter-svg-invert-white" src="./src/svg/r-alphabet.svg">
-              </div>
-            </div>
-            <div class="row justify-content-start">
-              <div class="col-6">
-                <img class="filter-svg-invert-white" src="./src/svg/chevron-right.svg">
-              </div>
-            </div>
-          </a>
-          <div class="row justify-content-center">
-              <a href="#" class="header-nav-item" >Shop</a>
-              <a href="#" class="header-nav-item">Cruiser</a>
-              <a href="#" class="header-nav-item">Switchback System</a>
-              <a href="#" class="header-nav-item">Basecamp</a>
-              <a href="#" class="header-nav-item">Family Basecamp</a>
-              <a href="#" class="header-nav-item">More Gear</a>
-          </div>
-          <div class="row justify-content-end">
-              <a href="#" type="button" class="btn btn-outline-dark rounded">Register Yourgit p Gear</a>
-              <a href="#" type="button" class=""><i class="fa-solid fa-magnifying-glass"></i></a>
-              <a href="#" type="button" class=""><i class="fa-regular fa-heart"></i></a>
-              <a href="#" type="button" class=""><i class="fa-regular fa-user"></i></a>
-              <a href="#" type="button" class=""><i class="fa-solid fa-cart-flatbed"></i></a>
+    <section id="main-header">
+        <div class="video-container">
+            <div class="row d-flex flex-column justify-content-center h-100">
+                <div class="col-12">
+                    <video src="./src/img/veer_abovethefoldcombo.mp4" loop="" muted="" autoplay="" loading="lazy" preload="none"></video>
+                    <nav class="navbar">
+                        <div id="navbar" class="d-flex align-items-center justify-content-between w-100 p-1">
+                            <div class="d-flex">
+                                <a href="#" >
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex align-items-center">
+                                            <svg id="svg-logo" width="56" height="43" viewBox="0 0 56 43" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_195_40)">
+                                                <path d="M0.203125 42.7554V36.4718L19.8942 28.3984V34.6709L0.203125 42.7554Z"></path>
+                                                <path d="M19.3451 14.6272C18.3924 18.0369 15.261 20.8869 10.2681 20.8869C4.83587 20.8869 0 17.0061 0 10.3845C0 4.04345 4.71789 0 9.83119 0C15.9354 0 19.703 3.76522 19.703 10.1094C19.7096 10.7321 19.6691 11.3543 19.5819 11.9709H5.86667C5.98545 14.1903 8.00797 15.7768 10.347 15.7768C12.5266 15.7768 13.7567 14.746 14.3115 13.201L19.3451 14.6272ZM13.8754 8.09008C13.7957 6.58256 12.7665 4.76173 9.91011 4.76173C8.95511 4.71244 8.01729 5.02938 7.28797 5.64789C6.55866 6.26639 6.0928 7.13986 5.98545 8.09008H13.8754Z"></path>
+                                                <path d="M40.9595 14.6272C40.0077 18.0369 36.8762 20.8901 31.8833 20.8901C26.4511 20.8901 21.6152 17.0061 21.6152 10.3845C21.6144 4.04345 26.3323 0 31.4464 0C37.5507 0 41.3183 3.76522 41.3183 10.1094C41.3249 10.7321 41.2844 11.3544 41.1971 11.9709H27.4851C27.6039 14.1903 29.6264 15.7768 31.9654 15.7768C34.145 15.7768 35.3751 14.746 35.9299 13.201L40.9595 14.6272ZM35.4891 8.09008C35.4094 6.58256 34.3802 4.76173 31.5246 4.76173C30.5696 4.71244 29.6317 5.02938 28.9024 5.64789C28.1731 6.26639 27.7072 7.13986 27.5999 8.09008H35.4891Z"></path>
+                                                <path d="M55.9988 6.54288C55.3748 6.40204 54.7363 6.33514 54.0966 6.34358C51.6779 6.34358 49.4983 7.77058 49.4983 11.6952V20.2987H43.4746V0.595695H49.3006V3.25279C50.3314 1.03336 52.8291 0.398784 54.4147 0.398784C54.9497 0.393019 55.483 0.45925 56.0004 0.595695L55.9988 6.54288Z"></path>
+                                                <path d="M18.4744 27.8087L0.203125 20.3086V26.5906L10.8204 30.9466L18.4744 27.8087Z" ></path>
+                                            </g>
+                                                <defs><clipPath id="clip0_195_40"><rect width="56" height="42.756"></rect></clipPath></defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="navbar-nav-link" class="d-flex">
+                                <a href="#" class="nav-link" >Shop</a>
+                                <a href="#" class="nav-link">Cruiser</a>
+                                <a href="#" class="nav-link">Switchback System</a>
+                                <a href="#" class="nav-link">Basecamp</a>
+                                <a href="#" class="nav-link">Family Basecamp</a>
+                                <a href="#" class="nav-link">More Gear</a>
+                            </div>
+                            <div class="d-flex">
+                                <a href="#" type="button" class="btn btn-outline-dark register-saved-button">Register Your Gear</a>
+                                <a href="#" type="button" class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <a href="#" type="button" class="nav-icon"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#" type="button" class="nav-icon"><i class="fa-regular fa-user"></i></a>
+                                <a href="#" type="button" class="nav-icon"><i class="fa-solid fa-cart-flatbed"></i></a>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="row centered-text">
+                        <div class="col-12">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="d-flex align-items-center text-uppercase">
+                                    <h2 class="text-white">The world is waiting.</h2>
+                                </div>
+                                <div class="d-flex align-items-center text-uppercase mb-3">
+                                    <h2 class="speacial-yellow-color">Let's go.</h2>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button type="button" class="btn btn-lg btn-light shop-all-button">Shop All</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-center vh-100 text-uppercase">
-          <div class="row">
-            <div class="col-12">
-              <h1 class="" style="color: #fff;">The world is waiting.</h1>
+    </section>
+    <section id="our-thoughts">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-start">
+                <div class="col-3">
+                    <h6 class="text-uppercase">We exist to raise the <br> wild in every child</h6>
+                </div>
+                <div class="col-9">
+                    <h1 class="font-weight-bold">We believe in family access to open spaces.In <br> open ended excursions. And in the open minds <br> that result from them.</h1>
+                </div>
             </div>
-            <div class="col-12">
-              <h1 class="text-align-center" style="color: yellow;">Let's go.</h1>
+        </div>    
+    </section>
+    <section id="shop-collection">
+        <div class="container">
+            <h4 class="d-flex justify-content-start font-weight-bold pb-3"> Shop Collections</h4>
+            <div class="row d-flex justify-content-around g-4">
+                <div class="col">
+                    <div class="card shop-collection-card">
+                        <img src="./src/img/cruiser-1a.webp" id="cruiser" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <span class="card-title lead font-weight-bold">Cruiser</span>
+                            <p class="card-text small">Introducing Cruiser XL. <br> Two's company. Four's a party.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shop-collection-card">
+                        <img src="./src/img/switchback-system-1a.webp" id="switchback-system" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <span class="card-title text-center lead font-weight-bold">Switchback System</span>
+                            <p class="card-text small">Ready.Set.Switch. <br> Stroll,jog, bike and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shop-collection-card">
+                        <img src="./src/img/basecamp-1a.webp" id="basecamp" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <span class="card-title lead font-weight-bold">Basecamp</span>
+                            <p class="card-text small">Pop-up, bug free play yard for <br> backyards and beyond</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shop-collection-card">
+                        <img src="./src/img/family-basecamp-1a.webp" id="family-basecamp" class="card-img-top">
+                    <div class="card-body text-center">
+                        <span class="card-title lead font-weight-bold">Family Basecamp</span>
+                        <p class="card-text small">Family lodging. <br> For the heads of the family.</p>
+                    </div>
+                    </div>
+                </div> 
             </div>
-            <div class="col-12">
-              <button type="button" class="btn btn-lg btn-light rounded-circle border border-white p-6">Shop All</button>
-            </div>
-          </div>
         </div>
-    </div>
-    <div>
-      deneme
-    </div>
+    </section>
+    <section id="product-promotion-videos">
+        <div class="video-container">
+            <video src="./src/img/veer_cruiserpull.mp4" loop="" muted="" autoplay="" loading="lazy" preload="none"></video>
+            <p class="yellow-circle-banner">Now in <br> XL</p>
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class=" d-flex flex-column justify-content-center align-items-center h-100">
+                        <div class="d-flex align-items-center text-uppercase mb-3">
+                            <h1 class="text-capitalize text-white">Cruiser All-Terrain Hybrid</h1>
+                        </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <h5 class="text-white">For free range kids.</h5>
+                    </div>
+                    <div class="d-flex align-items-center text-uppercase">
+                        <div class="d-flex align-items-center mr-2">
+                            <button type="button" class="btn btn-light learn-more-button">Learn More</button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-dark buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="video-container">
+            <video src="./src/img/veer_switchback.mp4" loop="" muted="" autoplay="" loading="lazy" preload="none"></video> 
+            <p class="yellow-circle-banner">New</p>
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class=" d-flex flex-column justify-content-center align-items-center h-100">
+                        <div class="d-flex align-items-center text-uppercase mb-3">
+                            <h1 class="d-flex align-items-center text-capitalize text-white">Switchback System</h1>
+                        </div>
+                        <div class="d-flex align-items-center text-center mb-4">
+                            <h5 class="text-white">One Seat. <br>Multiple Personalities.</h5>
+                        </div>
+                        <div class="d-flex align-items-center text-uppercase text-center">
+                            <div class="d-flex align-items-center mr-2">
+                                <button type="button" class="btn btn-light learn-more-button">Learn More</button>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-dark buy-now-button">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <video src="./src/img/veer_regbasecamp.mp4" loop="" muted="" autoplay="" loading="lazy" preload="none"></video>        
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class=" d-flex flex-column justify-content-center align-items-center h-100">
+                        <div class="d-flex align-items-center mb-2">
+                            <h1 class="text-capitalize text-white">Basecamp</h1>
+                        </div>
+                        <div class="d-flex align-items-center text-center mb-4">
+                            <h5 class="text-white">Pop-up shelter from the norm.</h5>
+                        </div>
+                        <div class="d-flex align-items-center text-uppercase text-center">
+                            <div class="d-flex align-items-center mr-2">
+                                <button type="button" class="btn btn-light learn-more-button">Learn More</button>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-dark buy-now-button">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <video src="./src/img/veer_familybasecamp.mp4" loop="" muted="" autoplay="" loading="lazy" preload="none"></video>        
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class=" d-flex flex-column justify-content-center align-items-center h-100">
+                        <div class="d-flex align-items-center mb-2">
+                            <h1 class="text-capitalize text-white">Family Basecamp</h1>
+                        </div>
+                        <div class="d-flex align-items-center text-center mb-4">
+                            <h5 class="text-white">A mom n’ pop operation</h5>
+                        </div>
+                        <div class="d-flex align-items-center text-uppercase text-center">
+                            <div class="d-flex align-items-center mr-2">
+                                <button type="button" class="btn btn-light learn-more-button">Learn More</button>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-dark buy-now-button">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="new-products-field">
+        <div class="row pt-5 pl-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-start">
+                    <h3 class="text-capitalize font-weight-bold">What's new?</h3>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex justify-content-start">
+                    <h5 class="text-capitalize">Forecast: Expect Change.</h5>
+                </div>
+            </div>
+        </div>
+        <div id="product-slider" class="glide">
+        <div data-glide-el="controls" class="glide__arrows d-flex justify-content-end mr-5">
+            <img data-glide-dir="<" class="glideControlArrowIcons mr-3" src="./src/svg/arrow-sm-left.svg">
+            <img data-glide-dir=">" class="glideControlArrowIcons ml-3" src="./src/svg/arrow-sm-right.svg">
+        </div>
+        <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides">
+                <div class="glide__slide">
+                    <div class="card new-product-card d-block p-4">
+                        <div class=" d-flex justify-content-between">
+                            <p class="yellow-square-banner">New</p>
+                            <img class="heartIcon" id="heartIcon" src="./src/svg/heart-angle.svg" onclick="toggleIconColor()">
+                        </div>
+                        <img src="https://cdn.shopify.com/s/files/1/0697/9574/2010/products/CatchAll1384-3_grande.webp?v=1677265127" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="text-capitalize small">Catch all</span>
+                            <p class="card-text small">$29.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glide__slide">
+                    <div class="card new-product-card d-block p-4">
+                        <div class="d-flex justify-content-between">
+                            <p class="yellow-square-banner">New</p>
+                            <img class="heartIcon" id="heartIcon" src="./src/svg/heart-angle.svg" onclick="toggleIconColor()">
+                        </div>
+                        <img src="https://cdn.shopify.com/s/files/1/0697/9574/2010/products/ParentOrganizer1393_rt_grande.webp?v=1679763589" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="text-capitalize small">Parent orgaziner</span>
+                            <p class="card-text small">$59.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glide__slide">
+                    <div class="card new-product-card d-block p-4">
+                        <div class=" d-flex justify-content-between">
+                            <p class="yellow-square-banner">New</p>
+                            <img class="heartIcon" id="heartIcon" src="./src/svg/heart-angle.svg" onclick="toggleIconColor()">
+                        </div>
+                        <img src="https://cdn.shopify.com/s/files/1/0697/9574/2010/products/CargoNet_rt_grande.webp?v=1678805813" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="text-capitalize small">Cargo net for cruiser</span>
+                            <p class="card-text small">$29.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glide__slide">
+                    <div class="card new-product-card d-block p-4">
+                        <div class=" d-flex justify-content-between">
+                            <p class="yellow-square-banner">New</p>
+                            <img class="heartIcon" id="heartIcon" src="./src/svg/heart-angle.svg" onclick="toggleIconColor()">
+                        </div>
+                        <img src="https://cdn.shopify.com/s/files/1/0697/9574/2010/products/ChildBodyBoards_grande.png?v=1675532524" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="text-capitalize small">Childe body board</span>
+                            <p class="card-text small">$69.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glide__slide">
+                    <div class="card new-product-card d-block p-4">
+                        <div class=" d-flex justify-content-between">
+                            <p class="yellow-square-banner">New</p>
+                            <img class="heartIcon" id="heartIcon" src="./src/svg/heart-angle.svg" onclick="toggleIconColor()">
+                        </div>
+                        <img src="https://cdn.shopify.com/s/files/1/0697/9574/2010/products/D1FA328A-B55F-4E35-AA96-DC24B17F3593_grande.png?v=1679527253" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="text-capitalize small">Custom sidewall kit for cruiser</span>
+                            <p class="card-text small">$69.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="headlines-about-products">
+        <div id="headlines-about-products-slider" class="glide"> 
+            <div data-glide-el="controls" class="glide__arrows d-flex justify-content-between p-5">
+                <img data-glide-dir="<" class="glideControlArrowIcons mr-3 glide__arrow glide__arrow--left" src="./src/svg/arrow-sm-left.svg">
+                <img data-glide-dir=">" class="glideControlArrowIcons ml-3 glide__arrow glide__arrow--right" src="./src/svg/arrow-sm-right.svg">
+            </div>
+            <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides">
+                    <div class="glide__slide">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span class="h5 mb-2">Awards and Recognition</span>
+                            <p class="h2 font-weight-bold text-capitalize">The Best Beach and Swimming Gear For Kids</p>
+                            <img src="./src/img/financial_times.png" class="article-callout-img" alt="...">
+                        </div>
+                    </div>
+                <div class="glide__slide">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <span class="h5 mb-2">Awards and Recognition</span>
+                        <p class="h2 font-weight-bold text-capitalize">The Best All-Terrain Stroller Wagon</p>
+                        <img src="./src/img/parade.png" class="article-callout-img" alt="...">
+                    </div>
+                </div>
+                <div class="glide__slide">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <span class="h5 mb-2">Awards and Recognition</span>
+                        <p class="h2 font-weight-bold text-capitalize">The Best Baby Gear and Products in 2022</p>
+                        <img src="./src/img/popsugar.png" class="article-callout-img" alt="...">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="inspiring-stories">
+            <img src="./src/img/365.png" class="article-callout-png" alt="...">
+            <div class="article-callout">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="d-flex flex-column pt-5">
+                            <h5 class="font-weight-bold pb-3">Because Life is A Daily <br> adventure.</h5>
+                            <p class="small text-secondary pb-5">We draw inspiration from stories of parents <br> raising the wild in their kids through <br> imagination, exploration and connection to <br>the great outdoors.</p>
+                        <div class="d-flex flex-column">
+                            <button type="button" class="btn btn-dark article-callout-button">Read More Stories</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="d-flex flex-column">
+                            <img src="./src/img/jack-mitrani.webp" class="small-border-radius">
+                            <div class="d-flex flex-column pt-4">
+                                <p class="h6 font-weight-bold text-secondary text-capitalize m-0">Jack mitrani</p>
+                                <span class="h4 font-weight-bold text-capitalize">World Record-Breaking Fame, “Friendship” and Fatherhood</span>
+                                <span class="text-small cursor-pointer text-decoration-underline text-capitalize">Read more</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="find-a-store">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-start store-landscape-container">
+                    <div class="d-flex align-items-center">
+                        <img src="./src/img/store-landscape.webp">
+                        <div class="d-flex flex-column find-a-store-card">
+                            <p class="h3 font-weight-bold text-white mt-5 pb-4">Up close and personal.</p>
+                            <span class="small text-white"> Visit an authorized dealer near you to <br> experience the Veer difference first <br> hand.</span>
+                            <br>
+                            <button type="button" class="btn btn-light find-store-button font-weight-bold mt-4">Find a Store</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="brands-slider-field">
+        <div  id="brands-slider" class="glide brands-container">
+            <div class="d-flex align-items-center justify-content-center mb-5">
+                <h4 class="text-capitalize medium">as featured in</h4>
+            </div>
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides mt-5">
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/e-news.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/business-insider.webp">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/best-products.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/lucies-list.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/harpers-bazaar.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/glamour.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/fatherly.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/espn.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/conde-nast-travler.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/wired.png">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/usatoday.avif">
+                    </li>
+                    <li class="glide__slide">
+                        <img class="brand-slider-img" src="./src/img/popsugar.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section  id="shipping and product warranty">
+        <div class="d-flex justify-content-around p-5 m-5">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <img src="./src/img/returns.png" class="little-icon mb-3">
+                <span class="small font-weight-bold">Fast, free shipping & returns</span>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <img src="./src/img/speed.png" class="little-icon mb-3">
+                <span class="small font-weight-bold">Order by Noon EDT to ship todays</span>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <img src="./src/img/warranty.png" class="little-icon mb-3">
+                <span class="small font-weight-bold">Best in class warranty on Veer Gear</span>
+            </div>
+        </div>
+    </section>
+    <section id="survery-field">
+        <div class="survey-button">
+            <i class="fa-solid fa-clipboard-list"></i>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1"></script>
+    <script>
+        new Glide('#product-slider', {
+        type: 'carousel', // Carousel tipinde kaydırıcı
+        autoplay: 3000, // Otomatik oynatma aralığı (ms)
+        perView: 4,
+        gap: 0,
+        hoverpause: true, // Fare üzerine gelindiğinde otomatik oynatmayı durdurma
+        animationDuration: 800, // Geçiş animasyon süresi (ms)
+        animationTimingFunc: 'ease-in-out', // Geçiş animasyon eğrisi
+        }).mount();
+    </script>
+    <script>
+      new Glide('#headlines-about-products-slider', {
+      type: 'slider', // Carousel tipinde kaydırıcı
+      perView: 1,
+      gap: 0,
+      animationDuration: 800, // Geçiş animasyon süresi (ms)
+      animationTimingFunc: 'ease-in-out', // Geçiş animasyon eğrisi
+      }).mount();
+    </script>
+    <script>
+        new Glide('#brands-slider', {
+        type: 'carousel',
+        autoplay: true, // Set autoplay to 0 to disable automatic sliding
+        perView: 4, // Number of slides to show at a time
+        focusAt: 'center', // Center the current slide in the viewport
+        gap: 0, // Space between slides
+        hoverpause: true,
+        animationDuration: 1000, // Geçiş animasyon süresi (ms)
+        animationTimingFunc: 'ease-in-out', // Geçiş animasyon eğrisi
+        rewind: true, // Enable continuous loop for the slider
+        }).mount();
+    </script>
+    <script>
+      const imageCruiserElement = document.getElementById('cruiser'); // Fotoğraf elementini seçin
+
+      // İmleç fotoğrafın üzerine geldiğinde fotoğrafı değiştir
+      imageCruiserElement.addEventListener('mouseenter', () => {
+        imageCruiserElement.src = './src/img/cruiser-2a.webp'; // Yeni fotoğrafın URL'sini burada belirleyin
+      });
+    
+      // İmleç fotoğrafın dışına çıktığında fotoğrafı ilk haline getir
+      imageCruiserElement.addEventListener('mouseleave', () => {
+        imageCruiserElement.src = './src/img/cruiser-1a.webp'; // İlk fotoğrafın URL'sini burada belirleyin
+      });
+
+      const imageSwitchbackElement = document.getElementById('switchback-system');
+      imageSwitchbackElement.addEventListener('mouseenter', () => {
+        imageSwitchbackElement.src = './src/img/switchback-system-2a.webp';
+      });
+      imageSwitchbackElement.addEventListener('mouseleave', () => {
+        imageSwitchbackElement.src = './src/img/switchback-system-1a.webp';
+      });
+
+      const imageBasecampElement = document.getElementById('basecamp');
+      imageBasecampElement.addEventListener('mouseenter', () => {
+        imageBasecampElement.src = './src/img/basecamp-2a.webp';
+      });
+      imageBasecampElement.addEventListener('mouseleave', () => {
+        imageBasecampElement.src = './src/img/basecamp-1a.webp';
+      });
+
+      const imageFamilyBasecampElement = document.getElementById('family-basecamp');
+      imageFamilyBasecampElement.addEventListener('mouseenter', () => {
+        imageFamilyBasecampElement.src = './src/img/family-basecamp-2a.webp';
+      });
+      imageFamilyBasecampElement.addEventListener('mouseleave', () => {
+        imageFamilyBasecampElement.src = './src/img/family-basecamp-1a.webp';
+      });
+      
+      let isIconSelected = false;
+      function toggleIconColor() {
+        isIconSelected = !isIconSelected;
+        const heartIcon = document.getElementById('heartIcon');
+        if (isIconSelected) {
+          heartIcon.style.fill = "invert(12%) sepia(78%) saturate(6817%) hue-rotate(266deg) brightness(107%) contrast(114%) ";
+          heartIcon.style.filter ="invert(12%) sepia(78%) saturate(6817%) hue-rotate(266deg) brightness(107%) contrast(114%)";
+        } else {
+          heartIcon.style.filter = "invert(0%) sepia(0%) saturate(7500%) hue-rotate(290deg) brightness(93%) contrast(107%)";
+        }
+        alert(isIconSelected); // true veya false değeri konsolda gösterilir
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
     <script src="./src/js/index.js"></script>
-  </body> 
-</html>
+  </body>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-7">
+                    <table class="table footer-item-table">
+                        <thead>
+                            <tr>
+                                <th class="footer-table-title">Shop</th>
+                                <th class="footer-table-title">About</th>
+                                <th class="footer-table-title">Services</th>
+                                <th class="footer-table-title">Help</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">Cruiser</a></th>
+                                <th><a href="#" class="footer-table-item">Our Propose</a></th>
+                                <th><a href="#" class="footer-table-item">Register Your Gear</a></th>
+                                <th><a href="#" class="footer-table-item">Support Center</a></th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">Switchback System</a></th>
+                                <th><a href="#" class="footer-table-item">365 Adventurers</a></th>
+                                <th><a href="#" class="footer-table-item">Find a Store</a></th>
+                                <th><a href="#" class="footer-table-item">FAQ's</a></th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">Basecamp</a></th>
+                                <th><a href="#" class="footer-table-item">Careers</a></th>
+                                <th><a href="#" class="footer-table-item">Gift Card</a></th>
+                                <th><a href="#" class="footer-table-item">Instruction Manuals</a></th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">Family Basecamp</a></th>
+                                <th><a href="#" class="footer-table-item">Affiliate Program</a></th>
+                                <th><a href="#" class="footer-table-item">Dealer Resources</a></th>
+                                <th><a href="#" class="footer-table-item">Shipping</a></th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">More Gear</a></th>
+                                <th><a href="#" class="footer-table-item">Influencers</a></th>
+                                <th><a href="#" class="footer-table-item"></a></th>
+                                <th><a href="#" class="footer-table-item">Returns and Refunds</a></th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">Military Savings</a></th>
+                                <th><a href="#" class="footer-table-item"></a></th>
+                                <th><a href="#" class="footer-table-item"></a></th>
+                                <th><a href="#" class="footer-table-item">Track Your Order</a></th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="footer-table-item">Replacement Parts</a></th>
+                                <th><a href="#" class="footer-table-item"></a></th>
+                                <th><a href="#" class="footer-table-item"></a></th>
+                                <th><a href="#" class="footer-table-item">Warranty</a></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-5">
+                    <div class="d-flex flex-column">
+                        <p class="h4 text-white pb-3">Subscribe for exclusive <br> offers and more.</p>
+                        <div class="d-flex align-items-center">
+                            <input type="text" class="form-control footer-search-input mr-2">
+                            <button type="button" class="btn subscribe-button">Subscribe</button>
+                        </div>
+                        <span class="small font-weight-bold text-white text-capitalize pt-5">Contact us</span>
+                        <span class="text-capitalize footer-contact-text pt-3">Email us</span>
+                        <span class="footer-contact-text pt-3">470-458-3350 (text or phone)</span>
+                        <span class="small font-weight-bold text-white text-capitalize pt-5">Follow</span>
+                        <div class="d-flex pt-4">
+                            <i class="fa-brands fa-instagram social-media-icon pr-3"></i>
+                            <i class="fa-brands fa-facebook-f social-media-icon pr-3"></i>
+                            <i class="fa-brands fa-youtube social-media-icon pr-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex align-items-end">
+                <div class="col-1">
+                    <div class="d-flex justify-content-start">
+                        <svg width="83" height="119" viewBox="0 0 83 119" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_829_3525)"><path d="M39.4189 80.3091H51.6158L67.2879 118.608H55.1135L39.4189 80.3091Z" fill="#F6DA49"></path><path d="M28.395 81.3767C35.0127 83.2279 40.5559 89.322 40.5559 99.033C40.5559 109.595 33.0121 119 20.1588 119C7.84953 119 0 109.825 0 99.8798C0 88.0068 7.31004 80.683 19.6238 80.683C20.8269 80.6694 22.0292 80.7477 23.2204 80.9173V107.591C27.5273 107.361 30.6069 103.429 30.6069 98.8799C30.6069 94.6415 28.6063 92.2497 25.6076 91.1687L28.395 81.3767ZM15.6991 92.0155C12.7723 92.1687 9.23421 94.173 9.23421 99.7267C9.23421 104.681 12.8308 107.127 15.6991 107.384V92.0155Z" fill="#F6DA49"></path><path d="M28.395 39.3394C35.0127 41.1906 40.5559 47.2847 40.5559 56.9912C40.5559 67.5579 33.0121 76.9626 20.1588 76.9626C7.84953 76.9626 0 67.8102 0 57.8425C0 45.9695 7.31004 38.6412 19.6238 38.6412C20.827 38.6281 22.0294 38.708 23.2204 38.8799V65.5581C27.5273 65.3284 30.6069 61.3918 30.6069 56.8471C30.6069 52.6086 28.6063 50.2124 25.6076 49.1359L28.395 39.3394ZM15.6991 49.9782C12.7723 50.1314 9.23421 52.1357 9.23421 57.6893C9.23421 62.6439 12.8308 65.0897 15.6991 65.3464V49.9782Z" fill="#F6DA49"></path><path d="M12.696 10.0893C12.4241 11.3027 12.2943 12.5437 12.3094 13.7872C12.3094 18.4896 15.0832 22.7325 22.699 22.7325H39.4006V34.4433H1.15099V23.1153H6.29409C1.9827 21.111 0.750871 16.251 0.750871 13.1657C0.740085 12.1262 0.868611 11.09 1.13301 10.0848L12.696 10.0893Z" fill="#F6DA49"></path><path d="M0.827247 3.68444C0.821902 4.41981 1.03473 5.14021 1.43872 5.7542C1.84271 6.36818 2.41965 6.84807 3.09633 7.13299C3.77301 7.41792 4.51892 7.49502 5.23941 7.35452C5.9599 7.21401 6.62248 6.86224 7.14309 6.34383C7.66369 5.82542 8.01884 5.16373 8.16347 4.44276C8.3081 3.72178 8.23569 2.97404 7.95543 2.29437C7.67516 1.6147 7.19968 1.03375 6.58932 0.625268C5.97896 0.216786 5.26124 -0.000865178 4.52723 7.79369e-06C4.0424 -0.0029613 3.56178 0.0901565 3.113 0.273985C2.66423 0.457814 2.25617 0.728751 1.9123 1.07118C1.56842 1.4136 1.29553 1.82076 1.10931 2.26924C0.923099 2.71773 0.827238 3.19869 0.827247 3.68444ZM7.6023 3.68444C7.59887 4.08281 7.51616 4.47647 7.359 4.84242C7.20185 5.20837 6.97341 5.53926 6.68705 5.81567C6.40069 6.09208 6.06217 6.30848 5.69131 6.4522C5.32045 6.59592 4.9247 6.66406 4.52723 6.65267C3.74147 6.65267 2.9879 6.33994 2.43229 5.78328C1.87668 5.22663 1.56454 4.47166 1.56454 3.68444C1.56454 2.89721 1.87668 2.14225 2.43229 1.58559C2.9879 1.02894 3.74147 0.716209 4.52723 0.716209C4.9247 0.704812 5.32045 0.772953 5.69131 0.916675C6.06217 1.0604 6.40069 1.2768 6.68705 1.55321C6.97341 1.82962 7.20185 2.1605 7.359 2.52645C7.51616 2.8924 7.59887 3.28607 7.6023 3.68444ZM6.48286 2.95026V2.18908L4.91386 3.08991V3.02685C4.83848 2.7776 4.68496 2.55929 4.47603 2.40434C4.26711 2.24938 4.01391 2.166 3.75396 2.16654C3.58327 2.16973 3.41503 2.20781 3.25953 2.27843C3.10404 2.34904 2.96457 2.4507 2.84967 2.5772C2.73477 2.7037 2.64685 2.85236 2.5913 3.01409C2.53576 3.17583 2.51375 3.34723 2.52663 3.51779V4.86903H6.50534V4.20243H4.94533V3.81057H4.9723L6.48286 2.95026ZM4.39685 3.61236V4.19792H3.07061V3.61236C3.07061 3.12591 3.31338 2.84667 3.74497 2.84667C4.17656 2.84667 4.39685 3.14393 4.39685 3.62137V3.61236Z" fill="#F6DA49"></path><path d="M68.4384 115.843L83 80.3092H70.8031L62.3467 100.956L68.4384 115.843Z" fill="#F6DA49"></path></g><defs><clipPath id="clip0_829_3525"><rect width="83" height="119" fill="white"></rect></clipPath></defs></svg>
+                    </div>
+                </div>
+                <div class="col-7">
+                   <div class="d-flex justify-content-center">
+                        <span class="footer-caption-text">Copyright Veer Gear, LLC. All rights reserved.</span>
+                        <span class="footer-caption-text">Patent</span>
+                        <span class="footer-caption-text">Privacy Policy</span>
+                        <span class="footer-caption-text">Terms of Use</span>
+                    </div> 
+                </div>
+                <div class="col-4">
+                    <div class="d-flex justify-content-end">
+                        <select type="text" class="form-control-sm border-0 countries-list">
+                            <option value="tr">Türkiye (TL)</option>
+                            <option value="en">İngiltere (Sterlin)</option>
+                            <option value="abd">ABD (Dolar)</option>
+                            <option value="gr">Almanya (Euro)</option>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+ </html>

@@ -1,18 +1,115 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Circular', Arial, Helvetica, sans-serif
+    letter-spacing: 0.5px;
+    height: 100%;
+    overflow-x: hidden;
+    /*font-family: 'Circular', Arial, Helvetica, sans-serif*/
   }
-  .header {
+  .speacial-brown-bg {
+    background-color: #352e33;
+  }
+  .speacial-yellow-color {
+    color: #F6DA49;
+  }
+  .video-container {
+    position: relative;
+    height: 100vh; /* viewport yüksekliği kadar */
+  }
+  .video-container video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* orantılı olarak genişletme/sıkıştırma */
+    position: absolute;
+  }
+  nav {
+    display: flex;
+  }
+  .navbar {
     background-color: transparent;
-    transition: background-color 0.3s;
-    padding: 20px;
   }
-  .header :hover {
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+  }
+  /* Transparan navbar'a üzerine gelindiğinde metin rengi siyah */
+  .navbar:hover .nav-link {
+    color: rgb(0, 0, 0) !important;
+  }
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+  .register-saved-button {
+    border: 0.13rem solid #fff;
+    border-radius: 20rem !important;
+    width: 200px;
+    max-width: 100% !important;
+    padding: 0.80rem 1.75rem !important;
+    text-align: center !important;
+  }
+  #svg-logo {
+    fill:#FFFFFF !important;
+  }
+  .navbar:hover #svg-logo {
+   fill: #000000 !important;
+  }
+  .navbar:hover .nav-icon {
+    color: rgb(0, 0, 0) !important;
+  }
+  .navbar:hover .register-saved-button {
+    color: rgb(0, 0, 0) !important;
+    border: 0.13rem solid black;
+    background-color: #fff !important;
+  }
+  .text-decoration-underline {
+    text-decoration: underline;
+  }
+  #our-thoughts .container-fluid {
+    padding: 10rem 3rem 0;
+  }
+  /* Transparan navbar'a üzerine gelindiğinde metin altı çizili hale gelsin */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #646464;
+    transition: width 0.5s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+    transition: width 0.5s ease;
+  }
+  .nav-icon {
+    position: relative;
+    display: inline-block;
+  }
+  .nav-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #646464;
+    transition: width 0.5s ease;
+  }
+  /* Transparan navbar'a üzerine gelindiğinde metin rengi siyah olsun */
+  .navbar:hover .nav-link:hover {
+    color: #646464 !important;
+  }
+  .navbar:hover {
     background-color: #FFFFFF;
-    color: black;
+    color: black; 
   }
-  .header a {
+  .navbar a {
     float: left;
     display: block;
     color: #fff;
@@ -21,109 +118,320 @@ body {
     text-decoration: none;
     font-size: 14px;
   }
-  .header-nav-item {
+  .shop-all-button {
+    display: inline-block !important;
+    font-size: 13px;
+    border: 0.13rem solid #fff;
+    border-radius: 20rem !important;
+    cursor: pointer !important;
+    max-width: 100% !important;
+    outline: 0 !important;
+    padding: 0.70rem 2.80rem !important;
+    text-align: center !important;
+  }
+  .shop-all-button:hover::after {
+    background-color: #0000 !important;
+    color: #FFFFFF !important;
+  }
+  #shop-collection .container {
+    padding: 8rem 4rem;
+    max-width: 100%;
+  }
+  .shop-collection-card {
+    border: none !important;
+    border-radius: 10px !important;
+  }
+  .shop-collection-card:hover {
+    background-color: #f5f5f5 !important;
+    cursor: pointer !important;
+  }
+  .shop-collection-card .card-title {
     position: relative;
-    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
   }
-  .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video-overlay {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: white;
-}
-.header-nav-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: black;
-  transition: width 0.5s;
-}
-.filter-svg-invert-white {
-  filter: invert(100%) sepia(0%) saturate(7488%) hue-rotate(360deg) brightness(104%) contrast(104%);
-}
-.header-nav-item:hover::after {
-  width: 100%;
-  transition: width 1s;
-}
-.header a.active {
-  background-color: #21a828;
-}
-.header .logo {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 7px 10px 3px 10px;
-  text-decoration: none;
-}
-.header .logo img {
-  width: 25px;
-  height: 25px;
-}
-.header .logo:hover {
-  background: transparent;
-}
-.header button {
-  display: none;
-}
-.container {
-  padding: 0px 10px;
-}
-@media screen and (max-width: 600px) {
-  .header a:not(:first-child) {
-    display: none;
+  .shop-collection-card .card-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #646464; 
+    transition: width 0.05s;
   }
-  .header button.icon {
-    background: #d8d8d8;
-    float: right;
-    display: block;
-    padding: 16px 17px;
-    border: 0;
-    outline: none;
+  .shop-collection-card .card-text {
+    color: #646464 !important;
+  }
+  .shop-collection-card .card-title:hover::before {
+    width: 100%; /* Üzerine gelindiğinde çizgi tamamen genişlesin */
+  } 
+  .yellow-circle-banner {
+    width: 80px;
+    height: 80px;
+    background-color: #f6da49;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    z-index: 1;
+    position: absolute;
+    top: 48px;
+    left: 48px;
+  }
+  .learn-more-button{
+    border: 0.13rem solid #fff;
+    background-color: transparent;
+    color: #FFFFFF;
+    border-radius: 20rem !important;
+    max-width: 100% !important;
+    width: 150px !important;
+    height: 50px !important;
+    text-align: center !important;
+  }
+  .learn-more-button:hover{
+    background-color: #FFFFFF;
+    border: 0.13rem solid #FFFFFF;
+  }
+  .buy-now-button {
+    border: 0.13rem solid #ffff !important;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 20rem !important;
+    max-width: 100% !important;
+    width: 150px !important;
+    height: 50px !important;
+  }
+  .buy-now-button:hover {
+    background-color: #000000 !important;
+    border: 0.13rem solid #000000 !important;
+  }
+  .new-product-card {
+    background-image: linear-gradient(to left, #f8f8f8be, #e9e9e9) !important;
+    border-radius: 0 !important;
+    padding: 12px 15px 20px 10px!important;
+    border: none;
     cursor: pointer;
   }
-  button.icon:focus, button.icon:hover {
-    border: 0;
-    outline: none;
-    background: #b3b3b3;
+  .glideControlArrowIcons {
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer;
   }
-}
-@media screen and (max-width: 600px) {
-  .header.responsive {
+  .heartIcon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .yellow-square-banner {
+    width: 65px;
+    height: 40px;
+    background-color: #ffe200;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    z-index: 1;
+  }
+  .article-callout{
+    background-color: rgba(241, 241, 241, 0.842);
+    padding: 9rem 5rem;
+    width: 100%;
+  }
+  .article-callout-png{
+    z-index: 9999;
+    width: 400px;
+    height: 350px;
     position: relative;
+    top: 170px; /* Y ekseninde 100 piksel aşağıda */
+    left: 515px; /* X ekseninde 50 piksel sağda */
+    transform: translateX(50px) translateY(100px);
   }
-  .header.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .article-callout-button {
+    border: 0.13rem solid #ffff !important;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 20rem !important;
+    max-width: 100% !important;
+    width: 180px !important;
+    height: 50px !important;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 400;
   }
-  .header.responsive .icon {
+  .article-callout-button:hover {
+    background-color: #000000 !important;
+    border: 0.13rem solid #000000 !important;
+  }
+  .small-border-radius {
+    border-radius: 5px;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .text-small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .store-landscape-container {
+    padding: 10rem 3rem 7rem 0;
+  }
+  .find-a-store-card{
+    background-color: #000000;
+    border-radius: 3px;
+    width: 700px;
+    height: 400px;
+    padding: 2rem 4rem 0 4rem;
+    z-index: 9999;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 100px;
+    transform: translateX(-150px);
   }
+  .find-store-button {
+    border: 0.13rem solid #ffffff !important;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 20rem !important;
+    max-width: 100% !important;
+    width: 150px !important;
+    height: 50px !important;
+  }
+  .find-store-button:hover {
+    background-color: #ffffff !important;
+    border: 0.13rem solid #000000 !important;
+  }
+  .brands-container{
+    background-color: rgba(235, 235, 235, 0.719);
+    width: 100%;
+    height: auto;
+    padding: 14rem 0 ;
+  }
+  .brand-slider-img {
+    width: 17rem;
+    max-height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .little-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .survey-button {
+    background-color: #000000;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 1px 6px #9a9db1; /* ışık efekti */
+    z-index: 99999;
+  }
+  .footer-container{
+    background-color: #352e33;
+    padding: 4rem 4rem 3rem 4rem;
+    width: 100%;
+  }
+  .footer-table-title {
+    color: #FFFFFF;
+    font-size: small;
+    padding-bottom: 2rem !important;
+  }
+  .footer-table-item {
+    color: #b3b3b3;
+    font-size: small;
+  }
+  .footer-table-item:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .footer-search-input{
+    width: 100% !important;
+    padding: 1.8rem;
+    border-radius: 30px;
+    border: 0.1rem solid darkgray !important;
+    background-color: transparent;
+  }
+  .footer-search-input:focus {
+  background-color: transparent;
+  border: 0.1rem solid darkgray !important;
+  box-shadow: none;
+  }
+  .subscribe-button {
+    border: 0.13rem solid #fff;
+    color: #FFFFFF;
+    background-color: #352e33;
+    border-radius: 20rem !important;
+    width: 30% !important;
+    max-width: 100%;
+    padding: 1rem!important;
+    text-align: center !important;
+  }
+  .subscribe-button:hover {
+    color: rgb(0, 0, 0) !important;
+    border: 0.13rem solid #FFFFFF;
+    background-color: #FFFFFF !important;
+  }
+  .table {
+    border-collapse: collapse;
+  }
+  .table thead td,
+  .table thead th{
+    border: none !important;
+  }
+  .table tbody td,
+  .table tbody th {
+    border: none !important;
+  }
+  .social-media-icon {
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  .footer-contact-text {
+    font-size:14px;
+    color: #b3b3b3;
+    cursor: pointer;
+  }
+  .footer-contact-text:hover{
+    color: #FFFFFF;
+  }
+  .footer-caption-text {
+    font-size:11px;
+    color: #b3b3b3;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0 2rem;
+  }
+  .footer-caption-text:hover{
+    color: #FFFFFF;
+  }
+  .countries-list {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 10px;
+  }
+  .countries-list:focus {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 10px;
+  }
+  @media screen and (min-width: 992px) {
+    #navbar-nav-link {
+        display: none;
+    }
+    #navbar-nav-link .register-saved-button {
+        display: none;
+    }
 }
-  

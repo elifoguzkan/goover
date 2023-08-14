@@ -25,19 +25,6 @@ body {
     position: relative;
     display: inline-block;
   }
-  .transparan-div {
-    background-color: transparent; /* Başlangıçta transparan arka plan */
-    transition: background-color 0.3s; /* Hover etkisini yumuşaklaştırmak için geçiş efekti ekledik */
-    padding: 20px; /* İçeriği görünür kılmak için padding ekledik */
-}
-
-.transparan-div p {
-    color: black; /* İçeriğin rengini belirledik, istediğiniz renk olabilir */
-}
-
-.transparan-div:hover {
-    background-color: #FFFFFF; /* Beyaz arka plan rengine dönüşecek */
-}
   .video-container {
   position: relative;
   padding-bottom: 56.25%;
